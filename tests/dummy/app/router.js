@@ -31,6 +31,11 @@ Router.map(function() {
       this.route('acceptance-testing');
     });
 
+    this.route('examples', function() {
+      this.route('1-belongs-to');
+      this.route('2-has-many');
+    });
+
     this.route('api', function() {
       this.route('class', { path: '/:class_id' });
     });

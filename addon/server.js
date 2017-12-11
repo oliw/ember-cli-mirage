@@ -184,9 +184,9 @@ export default class Server {
     @type String
     @public
   */
-  get namespace() {
-    return this.namespace;
-  }
+  // get namespace() {
+  //   return this.namespace;
+  // }
 
   config(config = {}) {
     let didOverrideConfig = (config.environment && (this.environment && (this.environment !== config.environment)));
@@ -230,7 +230,7 @@ export default class Server {
     let didOverridePretenderConfig = (config.trackRequests !== undefined) && this.pretender;
     assert(!didOverridePretenderConfig,
       'You cannot modify Pretender\'s request tracking once the server is created');
-    this.pretender = this.pretender || createPretender(this);
+    this.pretender = this.pretender || config.pretender || createPretender(this);
 
     if (config.baseConfig) {
       this.loadConfig(config.baseConfig);

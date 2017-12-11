@@ -38,9 +38,9 @@ export default class Collection {
     @property modelName
     @public
   */
-  get modelName() {
-    return this.modelName;
-  }
+  // get modelName() {
+  //   return this.modelName;
+  // }
 
   /**
     The underlying plain JavaScript array of models in this Collection. Often
@@ -55,9 +55,9 @@ export default class Collection {
     @property models
     @public
   */
-  get models() {
-    return this.models;
-  }
+  // get models() {
+  //   return this.models;
+  // }
 
   /**
      The number of models in the collection.
